@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Main Page</title>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAh06CwgR4Fl6FQcCY20oIVexPI1102yGg&callback=initMap">
+        </script>
+    <script src="LibraryMap.js">
+        window.onload = initMap;
+    </script>
+    <style>
+        #mapDisplay {
+            height: 400px;
+            width: 700px;
+        }
+
+        #picCard {
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+
+        #textIntro {
+            margin-top: 500px;
+            margin-right: 150px;
+            margin-left: 150px;
+            font-size: 25px;
+        }
+        #location {
+            background-color: rgb(254, 255, 219);
+        }
+
+        #lo {
+            background-color: moccasin;
+        }
+    </style>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            font-family: "Times New Roman", Georgia, Serif;
+            font-size: 25px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Playfair Display";
+            letter-spacing: 3px;
+        }
+
+        div.gallery {
+            margin: 7px;
+            border: 2px solid #ccc;
+            float: left;
+            width: 270px;
+            height: 450px;
+            background-color: antiquewhite;
+        }
+
+        div.gallery:hover {
+            border: 2px solid #777;
+        }
+
+        div.gallery img {
+            width: 350px;
+            height: 350px;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+            <a href="MainRest2.html" class="w3-bar-item w3-button">NAPASSANIEN RESTAURANT</a>
+            <div class="w3-right w3-hide-small">
+                <a href="MainRest2.html#ABS" class="w3-bar-item w3-button">ABOUT US</a>
+                <a href="showMenu.html" class="w3-bar-item w3-button">ORDER NOW</a>
+                <a href="MainRest.html" class="w3-bar-item w3-button" id="lo">LOG OUT</a>
+
+            </div>
+        </div>
+    </div>
+
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+        <img class="w3-image" src="pic/banner.png" width="1600" height="800">
+        <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+            <h1 class="w3-xxlarge">NAPASSANIEN RESTAURANT</h1>
+        </div>
+    </header>
+
+    <div class="w3-container w3-padding-64">
+        <h1 class="w3-center">RECOMMENDED MENU</h1>
+
+        <div id="picCard">
+            <div class="gallery">
+                <a href="/showMenu">
+                    <img src="pic/kaosoi.jpg" class="w3-round w3-image w3-opacity-min" width="600px" height="400px">
+                </a>
+                <div class="desc">KHAO SOI</div>
+            </div>
+
+            <div class="gallery" style="background-color: rgb(255, 246, 208);">
+                <a href="/showMenu">
+                    <img src="pic/krapi.jpg" class="w3-round w3-image w3-opacity-min" width="600px" height="400px">
+                </a>
+                <div class="desc">SHRIMP PASTE RICE</div>
+            </div>
+
+            <div class="gallery">
+                <a href="/showMenu">
+                    <img src="pic/massaman.jpg" class="w3-round w3-image w3-opacity-min" width="600px" height="400px">
+                </a>
+                <div class="desc">CHICKEN MASSAMAN</div>
+            </div>
+
+            <div class="gallery" style="background-color: rgb(255, 246, 208);">
+                <a href="/showMenu">
+                    <img src="pic/melonjuice.jpg" class="w3-round w3-image w3-opacity-min" width="600px" height="400px">
+                </a>
+                <div class="desc">WATERMELON SMOOTHIE</div>
+            </div>
+
+            <div class="gallery">
+                <a href="/showMenu">
+                    <img src="pic/chomuang.jpg" class="w3-round w3-image w3-opacity-min" width="600px" height="400px">
+                </a>
+                <div class="desc">CHO MUANG</div>
+            </div>
+        </div>
+
+
+
+        <div id="textIntro">
+            <p class="w3-text-blue-grey">
+                We offer full-service catering for any event, large or small. We understand your needs and we will cater
+                the
+                food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.
+            </p>
+        </div>
+
+        <div id="location">
+            <div class="w3-row w3-padding-64" id="about">
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <h1 class="w3-center" style="font-size: 30px;"><B>LOCATION</B></h1><br>
+                    <div class="w3-col m6 w3-padding-large w3-hide-small" id="mapDisplay">
+
+                    </div>
+                </div>
+                <div class="w3-col m6 w3-padding-large">
+                    <h1 class="w3-center" style="font-size: 30px;"> <B>CONTACT US</B></h1><br>
+                    <p class="w3-large"><span class="w3-tag w3-light-grey"> FACEBOOK : </span> <a
+                            href="https://www.facebook.com/nuszaalovelove" target="_blank">NAPASSANIEN RESTAURANT
+                            OFFICIAL </a></p>
+                    <p class="w3-large"><span class="w3-tag w3-light-grey"> INSTAGRAM : </span> <a
+                            href="https://www.instagram.com/nien_nyh/" target="_blank"> RESTAURANT OFFICIAL </a></p>
+                    <p class="w3-large"><span class="w3-tag w3-light-grey"> TELEPHONE : </span> 081-234-567 ,
+                        092-789-456 </p>
+                    <p class="w3-large"><span class="w3-tag w3-light-grey"> E - MAIL : </span> <a
+                            href="mailto:NAPASSANIEN@mail.kmutt.ac.the"
+                            target="_blank">NAPASSANIEN@mail.kmutt.ac.the</a> </p>
+                    <p class="w3-large"><span class="w3-tag w3-light-grey"> BANGKOK BRANCH : </span><a
+                            href="https://goo.gl/maps/2mYdjKcTvjyH7HEe9" target="_blank"> No.555, Thung Khru, Bangmod,
+                            Bangkok, 10400 </a></p>
+                    <p class="w3-large"><span class="w3-tag w3-light-grey"> HATYAI BRANCH : </span><a
+                            href="https://goo.gl/maps/GDamCvoPETyDsB749" target="_blank"> No.542/2, Sadao, Hatyai,
+                            Songkhla </a></p>
+                    <p class="w3-large"><span class="w3-tag w3-light-grey"> NAKORN SAWAN BRANCH : </span><a
+                            href="https://goo.gl/maps/gYDT4AxAxvG1TL6V9" target="_blank"> No.33/3, Paknampho, Mueng,
+                            NakornSawan, 60000 </a></p>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <footer id="ABS" class="w3-center w3-light-grey w3-padding-32">
+        <p><b>CREATE BY</b>
+            <a class="w3-hover-text-red"><br> NIEN - YING HUNG : 63130500412 <br> NAPASSANAN
+                PUNYAPRUK : 63130500435 </a>
+            <br><b>FINAL PROJECT FOR DSI213 : PROGRAMMING FOR DIGITAL SERVICES</b>
+        </p>
+    </footer>
+
+</body>
+
+</html>

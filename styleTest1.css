@@ -1,0 +1,12 @@
+head,body,h1,h2,h3,h4,h5,h6,b
+#base  {
+    font-family: "Times New Roman", Georgia, Serif;
+    font-size: 25px;
+}
+
+#base {
+    margin-top: 2%;
+    margin-left: 30%;
+    margin-right: 30%;
+
+}

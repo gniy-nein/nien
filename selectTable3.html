@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Table</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body,
+        html {
+            font-family: "Times New Roman", Georgia, Serif;
+            font-size: 30px;
+            height: 100%;
+            margin: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+
+        .tablink {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 35px;
+            width: 30%;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            margin-left: 2%;
+
+        }
+
+        .tablink:hover {
+            background-color: #777;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: rgb(0, 0, 0);
+            display: none;
+            height: 150%;
+        }
+
+        #F1 {
+            background-color: rgb(245, 161, 146);
+            margin-top: 3%;
+            margin-left: 3%;
+            margin-right: 3%;
+            padding: 5px 20px 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #F2 {
+            background-color: rgb(180, 236, 142);
+            margin-top: 3%;
+            margin-left: 3%;
+            margin-right: 3%;
+            padding: 5px 20px 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #F3 {
+            background-color: rgb(142, 211, 236);
+            margin-top: 3%;
+            margin-left: 3%;
+            margin-right: 3%;
+            padding: 5px 20px 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .radiobtn {
+            border-color: #e7e7e7;
+            color: black;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 30%;
+            margin-right: 30%;
+            border-radius: 10px;
+            cursor: pointer;
+            border-style: solid;
+        }
+
+        .radiobtn:hover {
+            background: #e7e7e7;
+        }
+
+        .row {
+            margin-top: 1%;
+            margin-right: 20%;
+            margin-left: 20%;
+            border-radius: 10px;
+        }
+
+        .container {
+            background-color: #fffec5;
+            padding: 5px 20px 15px 20px;
+            border: 1px solid rgb(202, 234, 248);
+            border-radius: 10px;
+            text-align: center;
+
+        }
+
+        .button {
+            padding: 15px 25px;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: #04AA6D;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {
+            background-color: #3e8e41
+        }
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="tablink" onclick="openPage('F1', this, '#fffec5')" id="defaultOpen">FLOOR 1 </button>
+    <button class="tablink" onclick="openPage('F2', this, 'rgb(202, 234, 248)')">FLOOR 2</button>
+    <button class="tablink" onclick="openPage('F3', this, '')">RIVER SIDE</button>
+
+    <div class="row">
+        <div class="container">
+            <form action="/selectTable" method="get">
+                <div id="F1" class="tabcontent">
+                    <h2 id="label">SELECT TABLE FLOOR 1</h2>
+                    <div class="radiobtn">
+                        <input type="radio" id="t1" name="Table" value="1" />
+                        <label for="t1">Table 1 : 3 SEATS</label>
+                    </div>
+
+                    <div class="radiobtn">
+                        <input type="radio" id="t2" name="Table" value="2" />
+                        <label for="t2">Table 2 : 4 SEATS</label>
+                    </div>
+
+                    <div class="radiobtn">
+                        <input type="radio" id="t3" name="Table" value="3" />
+                        <label for="t3">Table 3 : 4 SEATS</label>
+                    </div>
+
+                    <div class="radiobtn">
+                        <input type="radio" id="t4" name="Table" value="4" />
+                        <label for="t4">Table 4 : 5 SEATS</label>
+                    </div>
+
+                    <div class="radiobtn">
+                        <input type="radio" id="t5" name="Table" value="5" />
+                        <label for="t5">Table 5 : 5 SEATS</label>
+                    </div>
+                </div>
+
+                <div id="F2" class="tabcontent">
+                    <h2 id="label">SELECT TABLE FLOOR 2</h2>
+                    <div class="radiobtn">
+                        <input type="radio" id="t6" name="Table" value="6" />
+                        <label for="t6">Table 6 : 6 SEATS</label>
+                    </div>
+
+                    <div class="radiobtn">
+                        <input type="radio" id="t7" name="Table" value="7" />
+                        <label for="t7">Table 7 : 5 SEATS</label>
+                    </div>
+
+                    <div class="radiobtn">
+                        <input type="radio" id="t8" name="Table" value="8" />
+                        <label for="t8">Table 8 : 5 SEATS</label>
+                    </div>
+
+                    <div class="radiobtn">
+                        <input type="radio" id="t9" name="Table" value="9" />
+                        <label for="t9">Table 9 : 8 SEATS</label>
+                    </div>
+
+                    <div class="radiobtn">
+                        <input type="radio" id="t10" name="Table" value="10" />
+                        <label for="t10">Table 10 : 10 SEATS</label>
+                    </div>
+                </div>
+
+                <div id="F3" class="tabcontent">
+                    <h2 id="label">RIVER SIDE</h2>
+                    <div class="radiobtn">
+                        <input type="radio" id="t11" name="Table" value="11" />
+                        <label for="t6">Table 11 : 6 SEATS</label>
+                    </div>
+
+                    <div class="radiobtn">
+                        <input type="radio" id="t12" name="Table" value="12" />
+                        <label for="t7">Table 12 : 5 SEATS</label>
+                    </div>
+
+                    <div class="radiobtn">
+                        <input type="radio" id="t13" name="Table" value="13" />
+                        <label for="t8">Table 13 : 5 SEATS</label>
+                    </div>
+
+                    <div class="radiobtn">
+                        <input type="radio" id="t14" name="Table" value="14" />
+                        <label for="t9">Table 14 : 8 SEATS</label>
+                    </div>
+
+                    <div class="radiobtn">
+                        <input type="radio" id="t15" name="Table" value="15" />
+                        <label for="t10">Table 15 : 10 SEATS</label>
+                    </div>
+                </div>
+                <br><input type="submit" class="button" value="Select Table">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>

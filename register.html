@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: "Times New Roman", Georgia, Serif;
+            font-size: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            margin-top: 5%;
+            margin-right: 25%;
+            margin-left: 25%;
+        }
+
+        .col-50 {
+            -ms-flex: 50%;
+            /* IE10 */
+            flex: 50%;
+        }
+
+        .col-75 {
+            -ms-flex: 75%;
+            /* IE10 */
+            flex: 75%;
+        }
+
+        .col-50,
+        .col-75 {
+            padding: 0 16px;
+        }
+
+        .container {
+            background-color: #dddc9f;
+            padding: 5px 20px 15px 20px;
+            border: 1px solid rgb(220, 235, 166);
+            border-radius: 3px;
+        }
+
+        input,
+        #sel {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        #btn {
+            background-color: #7a7926;
+            color: white;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            width: 100%;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 17px;
+        }
+
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+            <a href="MainRest.html" class="w3-bar-item w3-button">NAPASSANIEN RESTAURANT</a>
+            <div class="w3-right w3-hide-small">
+                <a href="MainRest.html#ABS" class="w3-bar-item w3-button">ABOUT US</a>
+                <a href="login.html" class="w3-bar-item w3-button">LOGIN</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+
+            <div class="col-50">
+                <h1 class="w3-center">REGISTERATION</h1>
+                <form action="MainRest.html" method="get">
+                    <label for="id">USER ID</label>
+                    <input type="number" id="id" name="userId" required>
+
+                    <label for="name">USER NAME</label>
+                    <input type="text" id="name" name="username" required>
+
+                    <label for="sel">SEX</label>
+                    <select name="sex" id="sel">
+                        <option value="Male" id="sel"> Male </option>
+                        <option value="Female" id="sel"> Female</option>
+                    </select>
+
+                    <label for="pwd">PASSWORD</label>
+                    <input type="text" id="pwd" name="password" required placeholder="A-Z , number">
+
+                    <label for="tel">TELEPHONE</label>
+                    <input type="text" id="tel" name="phone" required>
+
+                    <label for="email">E-MAIL</label>
+                    <input type="email" name="email" id="useremail" required>
+
+                    <label for="adr">ADDRESS</label>
+                    <input type="text" id="adr" name="address" required>
+
+                    <input type="submit" value="Click to Register" id="btn" class="w3-hover-text-yellow">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
